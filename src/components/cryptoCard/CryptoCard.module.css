@@ -1,0 +1,33 @@
+.crypto_card {
+	display: flex;
+	width: 100%;
+	justify-content: space-evenly;
+
+	background-color: var(--bg_color);
+	border-top: solid 1px var(--border_color);
+	/* border-bottom: solid 1px black; */
+}
+
+.crypto_card:hover {
+	background-color: var(--hover_color);
+}
+
+#card_name_div {
+	display: flex;
+	width: 50%;
+	background-color: aqua;
+}
+
+#card_rank {
+	width: 10%;
+}
+
+.crypto_card img {
+	width: 2vw;
+	height: 2vw;
+	display: inline-block;
+}
+
+.inner_card_div {
+	width: 10.2%;
+}

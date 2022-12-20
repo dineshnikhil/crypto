@@ -1,0 +1,17 @@
+.crypto_display_div {
+	width: 80%;
+	margin: 5% 10%;
+
+	border-bottom: solid 2px black;
+}
+
+.crypto_display_heading {
+	position: sticky;
+	top: 20px;
+}
+
+.search_box {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}

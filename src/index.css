@@ -1,13 +1,53 @@
+:root {
+	--bg_color: #fafbfd;
+	--font_color: #222531;
+	--font_color_2: #d7e5fd;
+	--hover_color: #f8fafd;
+	--nagitive_color: #ea3943;
+	--positive_color: #16c784;
+	--border_color: #eff2f5;
+}
+
+[data-theme='dark'] {
+	--bg_color: #17171a;
+	--font_color: #ffffff;
+	--font_color_2: #eff2f5;
+	--hover_color: #171924;
+	--nagitive_color: #ea3943;
+	--positive_color: #16c784;
+	--border_color: #222531;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: var(--bg_color);
+	color: var(--font_color);
+}
+
+#card_name_div {
+	display: flex;
+	width: 20%;
+	/* background-color: aqua; */
+}
+
+#card_rank {
+	width: 2%;
+}
+
+.green {
+	color: var(--positive_color);
+}
+
+.red {
+	color: var(--nagitive_color);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
 }

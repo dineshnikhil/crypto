@@ -6,12 +6,19 @@
 }
 
 .crypto_display_heading {
+	display: flex;
 	position: sticky;
-	top: 20px;
+	top: 8%;
+
+	background-color: var(--bg_color);
 }
 
 .search_box {
 	display: flex;
 	width: 100%;
 	justify-content: space-around;
+}
+
+.home_div {
+	padding-top: 5%;
 }

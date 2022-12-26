@@ -11,9 +11,9 @@ function App() {
 			<Nav />
 			<main>
 				<Routes>
-					<Route path="/" element={<Home />} />
-					<Route path="/login" element={<Login />} />
-					<Route path="/createAccount" element={<CreateAccount />} />
+					<Route path="/crypto" element={<Home />} />
+					<Route path="/crypto/login" element={<Login />} />
+					<Route path="crypto/createAccount" element={<CreateAccount />} />
 				</Routes>
 			</main>
 		</div>

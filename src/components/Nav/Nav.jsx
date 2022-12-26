@@ -29,13 +29,13 @@ function Nav() {
 	return (
 		<div className={classes.nav}>
 			<div>
-				<NavLink to="/">CryptoInfo</NavLink>
+				<NavLink to="/crypto">CryptoInfo</NavLink>
 			</div>
 			<div>
 				<button onClick={is_dark_handler}>
 					<FontAwesomeIcon icon={icon} />
 				</button>
-				<NavLink to="/login">
+				<NavLink to="/crypto/login">
 					<button>Login</button>
 				</NavLink>
 			</div>

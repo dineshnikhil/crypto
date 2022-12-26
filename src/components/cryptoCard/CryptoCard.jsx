@@ -20,7 +20,7 @@ function CryptoCard(props) {
 	}
 	return (
 		<div className={classes.crypto_card}>
-			<div className={classes.inner_card_div}>
+			<div className={classes.inner_card_div} id="wishlist_div">
 				<button onClick={add_to_wishlist_handler}>
 					<FontAwesomeIcon
 						icon={is_added_to_wishlist === false ? faStar : solidStar}
@@ -33,7 +33,6 @@ function CryptoCard(props) {
 			<div className={classes.inner_card_div} id="card_name_div">
 				<img src={props.coin.image} alt="coin logo" />
 				<h4>{props.coin.name}</h4>
-				<br />
 				<h4>{props.coin.symbol}</h4>
 			</div>
 			<div className={classes.inner_card_div}>
@@ -61,6 +60,9 @@ function CryptoCard(props) {
 				</h4>
 			</div>
 			<div className={classes.inner_card_div}>
+				<h4>{props.coin.total_volume}</h4>
+			</div>
+			<div className={classes.inner_card_div} id="porfolio_div">
 				<button onClick={add_to_portfolio_handler}>
 					<FontAwesomeIcon
 						icon={is_added_to_portfolio === false ? faPlus : faCheck}

@@ -8,6 +8,10 @@
 	/* border-bottom: solid 1px black; */
 }
 
+.crypto_card h4 {
+	margin: 0;
+}
+
 .crypto_card:hover {
 	background-color: var(--hover_color);
 }
@@ -18,8 +22,22 @@
 	background-color: aqua;
 }
 
-#card_rank {
+.inner_card_div {
+	padding: 1%;
+}
+
+.crypto_card .inner_card_div:nth-child(1) {
 	width: 10%;
+}
+
+.inner_card_div img {
+	margin-right: 2%;
+}
+
+.inner_card_div button {
+	background-color: transparent;
+	border: none;
+	font-size: 1rem;
 }
 
 .crypto_card img {

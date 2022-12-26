@@ -2,6 +2,7 @@
 	--bg_color: #fafbfd;
 	--font_color: #222531;
 	--font_color_2: #d7e5fd;
+	--font_color_3: #808a9d;
 	--hover_color: #f8fafd;
 	--nagitive_color: #ea3943;
 	--positive_color: #16c784;
@@ -35,7 +36,24 @@ body {
 	/* background-color: aqua; */
 }
 
+#card_name_div h4 {
+	/* color: red; */
+	margin: auto 2%;
+}
+
+#card_name_div h4:nth-child(3) {
+	color: var(--font_color_3);
+}
+
 #card_rank {
+	width: 2%;
+}
+
+#wishlist_div {
+	width: 2%;
+}
+
+#porfolio_div {
 	width: 2%;
 }
 

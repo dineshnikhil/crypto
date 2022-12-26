@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import CryptoCard from '../cryptoCard/CryptoCard';
 import classes from './Home.module.css';
+import classes_2 from '../cryptoCard/CryptoCard.module.css';
 
 function Home() {
 	// creating the state for the coins array
@@ -31,7 +32,7 @@ function Home() {
 			.includes(search.toString().toLowerCase());
 	});
 	return (
-		<div>
+		<div className={classes.home_div}>
 			<h1>All you can find is about crypto coins Here</h1>
 			<h3>Be caution when you invest in crypto market</h3>
 			<div className={classes.search_box}>
@@ -64,7 +65,29 @@ function Home() {
 			</div>
 			<div className={classes.crypto_display_div}>
 				<div className={classes.crypto_display_heading}>
-					<h1>headings comes here</h1>
+					<div className={classes_2.inner_card_div} id="wishlist_div"></div>
+					<div className={classes_2.inner_card_div} id="card_rank">
+						<h4>Rank</h4>
+					</div>
+					<div className={classes_2.inner_card_div} id="card_name_div">
+						<h4>Name</h4>
+					</div>
+					<div className={classes_2.inner_card_div}>
+						<h4>Current Price</h4>
+					</div>
+					<div className={classes_2.inner_card_div}>
+						<h4>24%</h4>
+					</div>
+					<div className={classes_2.inner_card_div}>
+						<h4>Market Cap</h4>
+					</div>
+					<div className={classes_2.inner_card_div}>
+						<h4>24%</h4>
+					</div>
+					<div className={classes_2.inner_card_div}>
+						<h4>Total Volume</h4>
+					</div>
+					<div className={classes_2.inner_card_div} id="porfolio_div"></div>
 				</div>
 				{filtered_coins.map((coin) => {
 					return <CryptoCard coin={coin} />;

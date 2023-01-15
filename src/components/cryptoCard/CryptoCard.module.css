@@ -40,6 +40,10 @@
 	font-size: 1rem;
 }
 
+.inner_card_div button:hover {
+	cursor: pointer;
+}
+
 .crypto_card img {
 	width: 2vw;
 	height: 2vw;

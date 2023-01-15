@@ -5,25 +5,26 @@ import CryptoCard from '../cryptoCard/CryptoCard';
 import classes from './Home.module.css';
 import classes_2 from '../cryptoCard/CryptoCard.module.css';
 
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faL, faStar } from '@fortawesome/free-solid-svg-icons';
 import { faChartPie } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Loader from '../ui/Loader';
 
 function Home() {
 	// creating the state for the coins array
+	const [isLoading, setisLoading] = useState(true);
 	const [coins, setCoins] = useState([]);
 	const [currence, setCurrence] = useState('usd');
 	var api_link = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currence}&order=market_cap_desc&per_page=100&page=1&sparkline=false`;
-	// console.log(api_link);
 	// now fetching the coins data from api
 	useEffect(() => {
 		fetch(api_link)
 			.then((response) => {
-				// console.log(response);
 				return response.json();
 			})
 			.then((coins_result) => {
 				setCoins(coins_result);
+				setisLoading(false);
 			});
 	}, [currence]);
 
@@ -105,9 +106,12 @@ function Home() {
 					</div>
 					<div className={classes_2.inner_card_div} id="porfolio_div"></div>
 				</div>
-				{filtered_coins.map((coin) => {
-					return <CryptoCard coin={coin} />;
-				})}
+				<div className={classes.content}>
+					{isLoading && <Loader />}
+					{filtered_coins.map((coin) => {
+						return <CryptoCard coin={coin} />;
+					})}
+				</div>
 			</div>
 		</div>
 	);

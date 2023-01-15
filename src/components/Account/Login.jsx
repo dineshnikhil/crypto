@@ -12,7 +12,9 @@ function Login() {
 				<button type="submit" className={classes.login_button}>
 					login
 				</button>
-				<NavLink to="/createAccount">Dont have account? Create One</NavLink>
+				<NavLink to="/crypto/createAccount">
+					Dont have account? Create One
+				</NavLink>
 			</div>
 		</div>
 	);

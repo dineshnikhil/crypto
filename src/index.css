@@ -12,7 +12,7 @@
 [data-theme='dark'] {
 	--bg_color: #17171a;
 	--font_color: #ffffff;
-	--font_color_2: #eff2f5;
+	--font_color_2: #2b2e39;
 	--hover_color: #171924;
 	--nagitive_color: #ea3943;
 	--positive_color: #16c784;
@@ -56,7 +56,7 @@ body {
 #porfolio_div {
 	width: 2%;
 }
-
+/* displaying the numbers based the profit and loose in market */
 .green {
 	color: var(--positive_color);
 }
@@ -64,6 +64,27 @@ body {
 .red {
 	color: var(--nagitive_color);
 }
+/* ========================================================== */
+
+/* wishlist added status releveling color */
+.not_in_wishlist {
+	color: var(--font_color);
+}
+
+.in_wishlist {
+	color: gold;
+}
+/* ===================================== */
+
+/* portfolio added status reveling color */
+.not_in_portfolio {
+	color: var(--font_color);
+}
+
+.in_portfolio {
+	color: var(--positive_color);
+}
+/* ===================================================== */
 
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

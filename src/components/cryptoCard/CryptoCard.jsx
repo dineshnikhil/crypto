@@ -21,7 +21,12 @@ function CryptoCard(props) {
 	return (
 		<div className={classes.crypto_card}>
 			<div className={classes.inner_card_div} id="wishlist_div">
-				<button onClick={add_to_wishlist_handler}>
+				<button
+					onClick={add_to_wishlist_handler}
+					className={
+						is_added_to_wishlist == false ? 'not_in_wishlist' : 'in_wishlist'
+					}
+				>
 					<FontAwesomeIcon
 						icon={is_added_to_wishlist === false ? faStar : solidStar}
 					/>
@@ -63,7 +68,12 @@ function CryptoCard(props) {
 				<h4>{props.coin.total_volume}</h4>
 			</div>
 			<div className={classes.inner_card_div} id="porfolio_div">
-				<button onClick={add_to_portfolio_handler}>
+				<button
+					onClick={add_to_portfolio_handler}
+					className={
+						is_added_to_portfolio == false ? 'not_in_portfolio' : 'in_portfolio'
+					}
+				>
 					<FontAwesomeIcon
 						icon={is_added_to_portfolio === false ? faPlus : faCheck}
 					/>

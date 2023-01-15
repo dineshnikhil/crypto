@@ -1,0 +1,19 @@
+.login_div {
+	margin-top: 6%;
+}
+
+.login_button {
+	background-color: #4566e7;
+	border: none;
+	border-radius: 5%;
+	color: var(--bg_color);
+
+	font-size: 1rem;
+	padding: 0.5% 2%;
+	margin: 1%;
+}
+
+.login_button:hover {
+	background-color: #3459e7;
+	cursor: pointer;
+}

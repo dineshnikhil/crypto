@@ -5,6 +5,10 @@ import CryptoCard from '../cryptoCard/CryptoCard';
 import classes from './Home.module.css';
 import classes_2 from '../cryptoCard/CryptoCard.module.css';
 
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faChartPie } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 function Home() {
 	// creating the state for the coins array
 	const [coins, setCoins] = useState([]);
@@ -37,8 +41,20 @@ function Home() {
 			<h3>Be caution when you invest in crypto market</h3>
 			<div className={classes.search_box}>
 				<div>
-					<button>whishlist</button>
-					<button>portfolio</button>
+					<button className={classes.feature_btn}>
+						<FontAwesomeIcon
+							className={classes.feature_btn_icon}
+							icon={faStar}
+						/>{' '}
+						whishlist
+					</button>
+					<button className={classes.feature_btn}>
+						<FontAwesomeIcon
+							className={classes.feature_btn_icon}
+							icon={faChartPie}
+						/>{' '}
+						portfolio
+					</button>
 				</div>
 				<div>
 					<select

@@ -19,6 +19,45 @@
 	justify-content: space-around;
 }
 
+.search_box div {
+	width: 20%;
+}
+
 .home_div {
 	padding-top: 5%;
+}
+
+.home_div h1 {
+	text-align: center;
+	font-size: 2.5rem;
+}
+
+.home_div h3 {
+	text-align: center;
+	font-size: 1.5rem;
+	margin-bottom: 3%;
+}
+
+.feature_btn {
+	background-color: var(--font_color_2);
+	border: none;
+	border-radius: 10%;
+	font-size: 1rem;
+	color: var(--font_color);
+
+	padding: 2% 4%;
+	margin: 0 3%;
+}
+
+.feature_btn:hover {
+	color: var(--font_color);
+	cursor: pointer;
+}
+
+.feature_btn:hover .feature_btn_icon {
+	color: var(--font_color);
+}
+
+.feature_btn_icon {
+	color: var(--font_color_3);
 }

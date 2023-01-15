@@ -1,9 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+import classes from './CreateAccount.module.css';
+
 function CreateAccount() {
 	return (
-		<div>
+		<div className={classes.create_account_div}>
 			<div>
 				<input type="text" name="username" />
 				<input type="password" name="password" />

@@ -5,8 +5,9 @@ import CryptoCard from '../cryptoCard/CryptoCard';
 import classes from './Home.module.css';
 import classes_2 from '../cryptoCard/CryptoCard.module.css';
 
-import { faL, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faChartPie } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Loader from '../ui/Loader';
 
@@ -36,6 +37,8 @@ function Home() {
 			.toLowerCase()
 			.includes(search.toString().toLowerCase());
 	});
+
+	var search_div = <FontAwesomeIcon icon={faMagnifyingGlass} />;
 	return (
 		<div className={classes.home_div}>
 			<h1>All you can find is about crypto coins Here</h1>
@@ -59,6 +62,7 @@ function Home() {
 				</div>
 				<div>
 					<select
+						className={classes.home_select_option}
 						name="currence"
 						id="currence"
 						onChange={(event) => {
@@ -71,8 +75,10 @@ function Home() {
 						<option value="gbp">GBP</option>
 					</select>
 					<input
+						className={classes.search_input}
 						type="search"
 						name="coin"
+						placeholder="search"
 						id="coin_search"
 						onChange={(event) => {
 							setSearch(event.target.value);

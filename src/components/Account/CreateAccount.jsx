@@ -11,7 +11,7 @@ function CreateAccount() {
 				<input type="password" name="password" />
 				<input type="password" name="reEnterPassword" />
 				<button type="submit">Create Account</button>
-				<NavLink to="/crypto/login">Already have an account? Login</NavLink>
+				<NavLink to="/login">Already have an account? Login</NavLink>
 			</div>
 		</div>
 	);

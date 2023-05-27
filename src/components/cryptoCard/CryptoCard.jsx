@@ -8,10 +8,18 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+const CURRENCE_SYSMBOLS = {
+	USD: '$',
+	INR: '₹',
+	EUR: '€',
+	GBP: '£',
+};
+
 function CryptoCard(props) {
 	// maintaing the wishlist start
 	const [is_added_to_wishlist, set_is_added_to_wishlist] = useState(false);
 	const [is_added_to_portfolio, set_is_added_to_portfolio] = useState(false);
+	console.log(props.currence);
 	function add_to_wishlist_handler() {
 		set_is_added_to_wishlist(!is_added_to_wishlist);
 	}
@@ -41,7 +49,9 @@ function CryptoCard(props) {
 				<h4>{props.coin.symbol}</h4>
 			</div>
 			<div className={classes.inner_card_div}>
-				<h4>{props.coin.current_price}</h4>
+				<h4>{`${CURRENCE_SYSMBOLS[props.currence]} ${
+					props.coin.current_price
+				}`}</h4>
 			</div>
 			<div className={classes.inner_card_div}>
 				<h4

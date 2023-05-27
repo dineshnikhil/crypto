@@ -69,10 +69,10 @@ function Home() {
 							setCurrence(event.target.value);
 						}}
 					>
-						<option value="usd">USD</option>
-						<option value="inr">INR</option>
-						<option value="eur">EUR</option>
-						<option value="gbp">GBP</option>
+						<option value="USD">USD</option>
+						<option value="INR">INR</option>
+						<option value="EUR">EUR</option>
+						<option value="GBP">GBP</option>
 					</select>
 					<input
 						className={classes.search_input}
@@ -115,7 +115,7 @@ function Home() {
 				<div className={classes.content}>
 					{isLoading && <Loader />}
 					{filtered_coins.map((coin) => {
-						return <CryptoCard coin={coin} />;
+						return <CryptoCard coin={coin} currence={currence} />;
 					})}
 				</div>
 			</div>
